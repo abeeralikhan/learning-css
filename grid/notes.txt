@@ -3,4 +3,96 @@
 - Grid can do things that flexbox can't
 - If you simplify it, then it's easier to use and learn than flexbox
 - Course is broken down into approaching grid in two ways
-    1) Natural starting point of using grid 
+    1) Natural starting point of using grid
+    2) Kevin Powell way
+
+-- FIRST APPROACH:
+
+Step#01: Make the display of parent container grid
+    + display: grid;
+
++ Note: Grid and Flex children don't have collapsing margins, that means after applying you'll notice double margins
+
+- For spacing between elements, he recommends 100% gap
+    + Because we need vertical and horizontal spacing
+    + Spacing equal everywhere
+    + Gap doesnt add space outside the elements, they just add between the elements
+
++ Added gap using rem units
+
++ Always use devtools when working with grids
+
++ Determine how many rows and how many columns do you need?
+
+Step#02: grid-template-columns
+    + To determine number of columns
+
+    - Following example can be used if we need five columns:
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    + In the above example, fr unit breaks up the total space so that each column take equal space
+
+    + You repeat the column size times the number of columns you need
+
+    - Use repeat():
+        + repeat(n, value);
+        - grid-template-columns: repeat(3, 1fr)
+            // three columns of size 1fr each
+
+- Sometimes, you dont really need to define rows
+    + Implicit vs Explicit Grid
+
+    + Explicit: You define rows or cols
+    + Implicit: You don't define cols and rows. Is calculated automatically 
+
+    + In our example, we have explicit columns and implicit rows
+
+    + Implicit rows: Match height of the tallest one
+
+    + What's height: auto? [ these days ]
+
++ Sometimes, there are columns that span accross multiple columns 
+
++ Sometimes, there are columns that span accross multiple rows
+
+Step#03: grid-column [ short hand propert ]
+    + It is applied on items
+    + The item you want to span give it a class and select it
+
+    + Now, give it "grid-column: span [numer of cols to span]"
+    
+    Example:
+        grid-column: span 2;
+
+    - Naming convention:
+        .grid-[col | row]-span-[ span-size ]
+
+        Example:
+            .grid-col-span-2 {}
+            .grid-row-span-3 {}
+
+    - OR
+        grid-column-start: starting_col_num;
+        grid-column-end: ending_col_num;
+
++ .class:last-child { } // selects the last child
++ .class:nth-child(n) { } // select a specific child
+
+Step#04:
+    + Placing items on grid where do you dont want them to go
+    + Rearraning items ordering in grid
+
+    + This is where "line numbers" come in to play
+
+    + Keep things simple in the beginning, don't add unnecessary line numbers
+
+    + Just add "grid-column-start" to rearrange items
+    
+-- SECOND APPROACH:
+
+
+
+
+
+
+
