@@ -1,0 +1,46 @@
+[ 16/07/2022 ]
+
+- Why do we use flexbox?
+    + To make the alignment of items easier
+
+- How do we initialize flexbox?
+    + On the parent container, apply
+        .container {
+            display: flex;
+        }
+
+- By default, flex-direction is row. Which means all the items will be aligned in row, from left to right.
+
+- Property #01: flex-direction [container property]
+    + row --> row starting from left
+    + reverse-row --> row starting from right
+    + column --> column starting from top
+    + reverse-column --> column starting from bottom
+
+- Property #02: justify-content [container property]
+    + It aligns items horizontally for a row
+    + It aligns items vertically for a column
+
+- Property #03: align-items [container property]
+    + It aligns items vertically for a row
+    + It aligns items horizontally for a column
+
+- Property #04: flex-wrap [container property]
+    + When you decrease the size window, the items break into rows
+
+- Property #05: flex-flow [container property]
+    + Combine flex-direction and flex-wrap into one
+    .container {
+        flex-flow: row wrap;
+    }
+
+- Property #06: order [item property]
+
+- Property #07: flex-grow [item property]
+    + Greater the value, greater the space the element will take
+
+- Property #08: flex-shrink [item property]
+    + Greater the value, greater the element will shrink as the size of the container decreases
+
+- Property #09: align-self [item property]
+    + One element will be centered will others are not

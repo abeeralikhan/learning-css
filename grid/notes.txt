@@ -1,0 +1,6 @@
+[ 12/08/2022 17:45 ]
+
+- Grid can do things that flexbox can't
+- If you simplify it, then it's easier to use and learn than flexbox
+- Course is broken down into approaching grid in two ways
+    1) Natural starting point of using grid 

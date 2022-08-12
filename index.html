@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Getting started with CSS</title>
+    <style>
+        .all p {
+            color: red;
+        }
+        .only-desc > p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>.all p</h1>
+    <div class="all">
+        <p>Hello first</p>
+        <p>Hello second</p>
+        <div class="inside-all">
+            <p>Inside P</p>
+        </div>
+    </div>
+
+    <h1>.only-desc > p</h1>
+    <div class="only-desc">
+        <p>Hello first</p>
+        <p>Hello second</p>
+        <div class="inside-all">
+            <p>Inside P</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
