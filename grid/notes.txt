@@ -90,6 +90,33 @@ Step#04:
     
 -- SECOND APPROACH:
 
++ This approach is best when you need complex layout, when things are changing in the layout
+
++ Easy to change grid with respect to screen sizes
+
+Step#01: Define grid areas
+    + Where what item will appear
+    grid-template-area:
+        'one one two five'
+        'three four four five';
+
+    + In the above property, we have defined areas, which area will take how much space
+
+    + Each row is row
+
+    + Each col is col
+
+Step#02: Assign areas to each grid items
+    + Using :nth-child(item-number) {
+        grid-area: one;
+    }
+
+    assign each item an area where they belong
+
+    + You have to do it only once
+
++ Later on, you just have to update the grid-template-areas for different screens and each item will be at it's place corresponding to the area
+
 
 
 
