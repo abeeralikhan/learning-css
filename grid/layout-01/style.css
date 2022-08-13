@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    gap: 1rem;
+
+    /* grid-template-columns: repeat(12, 1fr); */
+
+    /* grid-template-columns: repeat(12, minmax(240px, 1fr)); */
+
+    /* Implicit grid */
+    grid-template-columns: repeat(auto-fill, minmax(243px, 1fr));
+
+    /* Set size of each row: For implicit grid*/
+    grid-auto-rows: 240px;
+}
+
+.grid-element {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    /* width: 100%; */
+    background-color: grey;
+}
+
+@media screen and (min-width: 50rem) {
+    .grid-tall {
+        /* span 2 means start where ever and span two rows */
+        /* if we dont wanna explicitly define start / end */
+        grid-row: span 2 / auto;
+    }
+    
+    .grid-wide {
+        /* span 2 means start where ever and span two rows */
+        /* if we dont wanna explicitly define start / end */
+        grid-column: span 2 / auto;
+    }
+}
+
+.grid-element:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease;
+}
